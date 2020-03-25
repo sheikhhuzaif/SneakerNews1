@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //            listArts.setAdapter(arrayAdapter);
             FeedAdapter feedAdapter = new FeedAdapter(MainActivity.this, R.layout.list_layout, parseArticles.getArticles());
             listArts.setAdapter(feedAdapter);
+
         }
 
         @Override
