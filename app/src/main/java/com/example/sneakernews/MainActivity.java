@@ -1,10 +1,14 @@
 package com.example.sneakernews;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
@@ -26,6 +30,26 @@ public class MainActivity extends AppCompatActivity {
 
         DownloadData downloadData = new DownloadData();
         downloadData.execute("https://solecollector.com/feeds/generator/e/r/1.rss");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.feeds_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id= item.getItemId();
+        if (id==R.id.wtbMenu)
+        {
+            Intent intent=new Intent(this, wtb_activity.class);
+            this.startActivity(intent);
+            return true;
+        }
+        else {
+            return super.onOptionsItemSelected(item);
+        }
     }
 
     protected class DownloadData extends AsyncTask<String, Void, String> {

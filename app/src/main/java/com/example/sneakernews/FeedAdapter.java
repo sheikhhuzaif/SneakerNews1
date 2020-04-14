@@ -79,7 +79,7 @@ public class FeedAdapter extends ArrayAdapter {
             this.tvCreator = v.findViewById(R.id.tvCreator);
             this.textPubDate = v.findViewById(R.id.textPubDate);
             this.tvDescription = v.findViewById(R.id.tvDescription);
-            this.imageView=v.findViewById(R.id.imageView);
+            this.imageView=v.findViewById(R.id.wtbImage);
         }
     }
 }
