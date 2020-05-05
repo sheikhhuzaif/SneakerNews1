@@ -46,13 +46,7 @@ public class FeedAdapter extends ArrayAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-
-
-//        TextView tvName =(TextView) convertView.findViewById(R.id.tvName);
-//        TextView tvCreator=(TextView) convertView.findViewById(R.id.tvCreator);
-//        TextView textPubDate=(TextView) convertView.findViewById(R.id.textPubDate);
-//        TextView tvDescription=(TextView) convertView.findViewById(R.id.tvDescription);
-        FeedEntry currentApp = articles.get(position);
+        final FeedEntry currentApp = articles.get(position);
         viewHolder.tvName.setText(currentApp.getTitle());
         viewHolder.tvCreator.setText(currentApp.getCreator());
         viewHolder.textPubDate.setText(currentApp.getPubDate());
@@ -81,5 +75,6 @@ public class FeedAdapter extends ArrayAdapter {
             this.tvDescription = v.findViewById(R.id.tvDescription);
             this.imageView=v.findViewById(R.id.wtbImage);
         }
+
     }
 }

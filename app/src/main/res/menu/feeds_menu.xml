@@ -4,14 +4,20 @@
 
     <item
         android:id="@+id/newsMenu"
-        android:title="Sneaker News" />
+        android:icon="@drawable/news"
+        android:title="Sneaker News"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/releasesMenu"
-        android:title="New Releases" />
+        android:icon="@drawable/calendar1"
+        android:title="New Releases"
+        app:showAsAction="always" />
     <item
         android:id="@+id/wtbMenu"
+        android:icon="@drawable/wtb"
         android:title="Where to Buy" />
     <item
         android:id="@+id/guideMenu"
+        android:icon="@drawable/guide"
         android:title="Buying Guide" />
 </menu>

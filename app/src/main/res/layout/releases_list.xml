@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/wtbImage"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
+        android:layout_width="382dp"
+        android:layout_height="245dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -42,19 +42,17 @@
         android:text="TextView"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/wtbImage" />
 
     <TextView
-        android:id="@+id/releasePrice"
-        android:layout_width="0dp"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:text="Drop: "
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/releaseDate" />
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/releaseDate"
+        app:layout_constraintStart_toStartOf="@+id/wtbImage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

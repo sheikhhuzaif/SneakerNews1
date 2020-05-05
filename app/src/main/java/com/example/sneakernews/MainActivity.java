@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ListView listArts;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
             this.startActivity(intent);
             return true;
         }
+        else if (id==R.id.guideMenu)
+        {
+            Intent intent=new Intent(this, buying_guide.class);
+            this.startActivity(intent);
+            return true;
+        }
+        else if (id==R.id.releasesMenu)
+        {
+            Intent intent=new Intent(this, releases_activity.class);
+            this.startActivity(intent);
+            return true;
+        }
         else {
             return super.onOptionsItemSelected(item);
         }
@@ -66,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 //            listArts.setAdapter(arrayAdapter);
             FeedAdapter feedAdapter = new FeedAdapter(MainActivity.this, R.layout.list_layout, parseArticles.getArticles());
             listArts.setAdapter(feedAdapter);
-
         }
 
         @Override
